@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace cis237InClass2
 {
-    class Program
+    class Factorial
     {
-        static void Main(string[] args)
+        public static int calculate(int number)
         {
-            Console.WriteLine(Factorial.calculate(5));
+            if (number == 1)
+                return 1;
+            return (number * calculate(number - 1));
         }
+
     }
 }
